@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../../assets/styles/normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-zoo</title>
+    <meta name="description"
+        content="Online-zoo - это платформа, где собрана информация о животных из различных зоопарков, имеющих веб-камеры. Предполагается, что пользователь может открыть страницу с ресурсами зоопарка, понаблюдать за кем-либо из животных или сделать пожертвование, на которое будет закуплен корм. В рамках задания, нам предстоит сделать адаптивную верстку и интерактивность главной страницы, и страницы с донатами." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Sorry, I`m still in progress.<br>(or forgot to merge working branch)<br> Please come back later</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="/index.html">
+                    <img class="logo__img" src="../../assets/icons/logo.svg" alt="Logo">
+                </a>
+
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Map
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Zoos
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="donate.html">
+                                Donate
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Contact us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__copy">
+                    <a class="header__copy-link"
+                        href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1">Designed
+                        by ©
+                    </a>
+                </div>
+                <button class="menu__mobile">
+                    <img class="menu__mobile" src="./images/burger_menu.png" alt="btn menu">
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+      <section class="favorite">
+          <div class="container">
+              <h1 class="title__hiden">PetStory Online</h1>
+              <div class="favorite__inner">
+                  <div class="favorite__circle">
+                      <ul class="favorite__title-list">
+                          <li class="favorite__title">Watch</li>
+                          <li class="favorite__title">your</li>
+                          <li class="favorite__title favorite__title--orange">favorite</li>
+                          <li class="favorite__title">animal</li>
+                          <li class="favorite__title">online</li>
+                      </ul>
+                  </div>
+                  <a class="favorite__btn btn" href="#">watch online</a>
+              </div>
+          </div>
+      </section>
+  </main>
 </body>
 </html>
