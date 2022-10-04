@@ -1121,6 +1121,35 @@ main {
   .donation {
       padding: 40px 0 30px
   }
+  .donation__title {
+    margin-bottom: 50px;
+  }
+  .donation__subtitle {
+    margin-bottom: 15px;
+    padding-right: 10px;
+  }
+  .donation__calc {
+    padding-top: 14px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 50px;
+  }
+  .donation__box {
+    gap: 30px;
+    padding-right: 10px;
+  }
+  .form__donation {
+    padding: 0 20px;
+  }
+  .form__donation-box {
+    margin-bottom: 100px;
+  }
+  .form__don-radio-wrapper {
+    padding-right: 30px;
+  }
+  .form__donation-radio+.form__donation-radio {
+    margin-left: 65px;
+  }
 
   .backstage {
       margin-bottom: 142px;
