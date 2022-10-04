@@ -613,3 +613,145 @@ main {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border-radius: 5px;
 }
+
+.footer {
+  background: #111115;
+  padding: 40px 0 50px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__btn {
+  display: block;
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 68px 0 44px;
+}
+
+.footer__social-item {
+  margin-bottom: 15px;
+}
+
+.footer__social-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  position: relative;
+  padding-left: 38px;
+  transition: all .3s;
+}
+
+.footer__social-link:hover {
+  color: #F9804B;
+  transition: all .3s;
+}
+
+.footer__social-img {
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+/* .footer__social-link:hover .footer__social-img {
+  color: #F9804B;
+  border-color: #F9804B;
+  transition: all .3s;
+}                                                                   <----- переделать иконки, добавить анимэйшн
+*/                
+.footer__menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-left: 43px;
+}
+
+.footer__menu-list {
+  display: flex;
+}
+
+.footer__menu-item {
+  margin-left: 58px;
+}
+
+.footer__menu-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.footer__menu-link:hover {
+  color: #F9804B;
+  transition: all .3s;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.footer__input-email {
+  width: 232px;
+  padding: 10px 7px 10px 10px;
+  border-radius: 2px;
+  border: 0.7px solid #F9804B;
+  background-color: transparent;
+}
+
+.footer__input-email::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #BDBDBD;
+}
+
+.footer__input-btn {
+  margin-left: 4px;
+  width: 132px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  background: #F1F3F2;
+  border: 1px solid #333B41;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #4B9200;
+}
+
+.footer__copy {
+  width: 230px;
+  margin-left: auto;
+}
+
+.footer__copy-link {
+  display: block;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
