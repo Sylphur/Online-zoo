@@ -204,6 +204,183 @@ main {
   border-radius: 25px;
 }
 
+.backstage {
+  margin-bottom: 180px;
+  position: relative;
+}
+
+.backstage__decor-img {
+  position: absolute;
+  top: -130px;
+  right: 0;
+}
+
+.backstage__inner {
+  display: flex;
+}
+
+.backstage__img {
+  width: 609px;
+  object-fit: cover;
+}
+
+.backstage__content {
+  margin-left: 87px;
+}
+
+.backstage__title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #333B41;
+  margin-bottom: 20px;
+}
+
+.backstage__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138%;
+  color: #333B41;
+}
+
+.backstage__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333B41;
+  margin-bottom: 34px;
+  margin-top: 54px;
+}
+
+.pets {
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.pets__decor-left {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+}
+
+.pets__decor-right {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.pets__inner {
+  position: relative;
+}
+
+.pets__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.pets__arrow-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pets__arrow-img:hover {
+  background: linear-gradient(113.96deg, #fc986d 1.49%, #fc9c30 101.44%);
+  transition: all .5s;
+}
+
+.pets__arrow-img-one {
+  right: -76px;
+}
+
+.pets__arrow-img-two {
+  left: -87px;
+}
+
+.pets__item {
+  max-width: 366px;
+  border: 1px solid #FA6F32;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.pets__item:hover .pets__box {
+  transform: translate(0, -5em);
+  transition: 0.5s;
+}
+
+.pets__item:hover .pets__img {
+  transform: scale(1.05);
+  filter: brightness(50%);
+  z-index: 1;
+  transition: 1s;
+}
+
+.pets__item:hover .pets__icon-img {
+  display: none;
+}
+
+.pets__item:hover .pets__title {
+  color: #FFFFFF;
+}
+
+.pets__item:hover .pets__subtitle {
+  color: #FFFFFF;
+}
+
+.pets__icon-img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.pets__box {
+  position: relative;
+  padding: 8px 56px 14px 16px;
+}
+
+.pets__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.pets__subtitle {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.pets__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 298px;
+  height: 54px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
 .menu__mobile {
   border: none;
   background-color: transparent;
