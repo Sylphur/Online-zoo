@@ -1843,24 +1843,35 @@ main {
   .footer {
     padding-top: 22px;
   }
+  .donation {
+    padding-bottom: 20px;
+  }
 
   .donation__title {
       font-size: 24px;
       line-height: 120%;
       margin-bottom: 30px;
   }
+  .form__donation-title {
+    padding-left: 0;
+  }
 
   .donation__subtitle {
       font-size: 24px;
+      margin-bottom: 10px;
   }
 
   .donation__descr {
       font-size: 16px;
+      margin-bottom: 15px;
   }
 
   .donation__img {
       width: 160px;
       height: 139px;
+  }
+  .donation__numb {
+    margin: 33px 50px 0 0;
   }
 
   .donation__numb p {
@@ -1870,18 +1881,44 @@ main {
   .donation__numb span {
       font-size: 40.6015px;
       line-height: 80%;
+      margin-bottom: 5px;
+  }
+  .form__donation-numb {
+    margin-bottom: 22px;
   }
 
   .donation__numb p::after {
-      right: -35px;
+    content: url(../icons/x_icon-small.png);
+      right: -12px;
+      top: 11px;
   }
 
   .form__item {
       font-size: 13px;
       line-height: 140%;
   }
-
+  .form__donation-input {
+    width: 5px;
+    height: 5px;
+    margin-bottom: 10px;
+  }
   .form__donation-box {
       margin-bottom: 25px;
+      height: 13px;
+  }
+  .donation__box {
+    gap: 0px;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+  .banner {
+    height: 225px;
+  }
+  .donation__top {
+    margin-bottom: 25px;
+  }
+  .donation__calc {
+    padding-top: 20px;
+    padding-bottom: 0;
   }
 }
