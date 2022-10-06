@@ -1325,8 +1325,8 @@ main {
 
   .testimonials__decor-img {
       transform: scale(0.6);
-      bottom: 0px;
-      right: 19px;
+      bottom: -160px;
+      right: -54px;
   }
 
   .testimonials__btn {
