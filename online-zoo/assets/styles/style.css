@@ -1231,7 +1231,6 @@ main {
   .friend__content-item:last-child::after {
     display: none;
   }
-
   .footer__info {
       display: none;
   }
