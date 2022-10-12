@@ -29,3 +29,40 @@ BURGERBUTTON2.addEventListener('click', () => {
 DARK.addEventListener('click', () => {
   closeMenu();
 })
+
+// ---------------------- Amount ----------------------------
+
+const wrapElepses = document.querySelectorAll('.form__donation-label'),
+bets = document.querySelectorAll('.form__item'),
+inputRadio = document.querySelectorAll('.form__donation-input'),
+inputDonate = document.querySelector('.form__donation-numb');
+
+
+for (let i = 0; i<wrapElepses.length; i++) {
+    wrapElepses[i].addEventListener('click', () => {
+        for (let k = 0; k < bets.length; k++) {
+            if (bets[k]) {
+                bets[k].classList.remove('active__bet');
+            }
+        }
+        bets[i].classList.add('active__bet');
+        inputDonate.value = bets[i].innerHTML.slice(1);
+    })
+}
+
+inputDonate.addEventListener('input', () => {
+    for (let k = 0; k < bets.length; k++) {
+        if (bets[k].innerHTML.slice(1) == inputDonate.value) {
+            bets[k].classList.add('active__bet');
+            for (let j = 0; j < inputRadio.length; j++) {
+              if (k === j) inputRadio[j].checked = true;
+              else inputRadio[j].checked = false;
+            }
+        } else {
+            bets[k].classList.remove('active__bet');
+            for (let j = 0; j < inputRadio.length; j++) {
+              inputRadio[j].checked = false;
+            }
+        }
+    }
+})

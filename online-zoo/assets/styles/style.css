@@ -98,6 +98,11 @@ select {
   font: inherit;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 a[class] {
   text-decoration: none;
 }
@@ -1001,6 +1006,13 @@ main {
 .form__donation-radio+.form__donation-radio {
   margin-left: 50px;
 }
+.form__donation-label input[type=radio]:checked {
+  border: 2px solid #FE9013;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .form__donation-btn {
   width: 298px;
@@ -1053,6 +1065,9 @@ main {
 
 .logo__mobile {
   display: none;
+}
+.active__bet {
+  color: #FE9013;
 }
 
 @media (max-width: 1560px) {

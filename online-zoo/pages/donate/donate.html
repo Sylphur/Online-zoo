@@ -138,8 +138,8 @@
                                     <span class="form__item">$250</span>
                                 </label>
                                 <label class="form__donation-label">
-                                    <input class="form__donation-input" name="point" type="radio">
-                                    <span class="form__item">$100</span>
+                                    <input class="form__donation-input" name="point" type="radio" checked>
+                                    <span class="form__item active__bet">$100</span>
                                 </label>
                                 <label class="form__donation-label">
                                     <input class="form__donation-input" name="point" type="radio">
@@ -152,7 +152,11 @@
                             </div>
 
                             <div class="form__donation-accept">
-                                <input class="form__donation-numb" type="number" placeholder="Another amount">
+                                <input class="form__donation-numb" type="number" placeholder="$ 100" 
+                                onkeyup="if(this.value > 9999) {
+                                  this.value = '9999';}
+                                  else if (this.value < 0) {
+                                  this.value = '0';}">
                                 <!-- <img class="form__donation-dollar" src="./images/dollar.svg" alt="Dollar"> -->
                                 <div class="form__don-radio-wrapper">
                                   <input class="form__donation-radio" type="radio">Monthly
