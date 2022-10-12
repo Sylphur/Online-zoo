@@ -1069,6 +1069,31 @@ main {
 .active__bet {
   color: #FE9013;
 }
+.scroll-right {
+  /* transform: translate(-140%);
+  transition: all 0.1s; */
+    animation-name: left;
+    animation-duration: 0.2s;
+  }
+  
+  @keyframes left {
+    from {transform: translate(240%);}
+    to {transform: translate(0);}
+  }
+  .scroll-left {
+    /* transform: translate(140%);
+    transition: all 0.1s; */
+    animation-name: right;
+    animation-duration: 0.2s;
+  }
+  
+  @keyframes right {
+    from {transform: translate(-240%);}
+    to {transform: translate(0);}
+  }
+  .btn-disabled {
+    background: #BDBDBD;
+  }
 
 @media (max-width: 1560px) {
   .backstage__decor-img {

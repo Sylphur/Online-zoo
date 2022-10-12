@@ -82,3 +82,110 @@ cardsTest.addEventListener('click', (e) => {
     storyCardPopap.innerHTML = newStory;
     console.log(imgCardPopap.childNodes[1]);
 })
+
+// ------------------------------ pets carousel ----------------------------------
+
+const cardsTotal = [
+  pandas = {
+      name: "giant Pandas",
+      textCard: "Native to Southwest China",
+      iconeFood: "../../assets/icons/banana-bamboo_icon.svg",
+      imgCardPets: "../../assets/images/pets/1.jpg",
+  },
+
+  eagles = {
+      name: "Eagles",
+      textCard: "Native to South America",
+      iconeFood: "../../assets/icons/meet-fish_icon.svg",
+      imgCardPets: "../../assets/images/pets/2.jpg",
+  },
+
+  gorillas = {
+      name: "Gorillas",
+      textCard: "Native to Congo",
+      iconeFood: "../../assets/icons/banana-bamboo_icon.svg",
+      imgCardPets: "../../assets/images/pets/3.jpg",
+  },
+
+  sloth = {
+      name: "Two-toed Sloth",
+      textCard: "Mesoamerica, South America",
+      iconeFood: "../../assets/icons/banana-bamboo_icon.svg",
+      imgCardPets: "../../assets/images/pets/4.png",
+  },
+
+  cheetahs = {
+      name: "cheetahs",
+      textCard: "Native to Africa",
+      iconeFood: "../../assets/icons/meet-fish_icon.svg",
+      imgCardPets: "../../assets/images/pets/5.jpg",
+  },
+
+  penguins = {
+      name: "Penguins",
+      textCard: "Native to Antarctica",
+      iconeFood: "../../assets/icons/meet-fish_icon.svg",
+      imgCardPets: "../../assets/images/pets/6.jpg",
+  },
+];
+
+let PETS = document.querySelectorAll('.pets__item');
+let newCardsArr = [];
+const mix = () => {
+    let cloneCardsArr = Array.from(cardsTotal);
+    for (let i = cloneCardsArr.length; i > 0; i--) {
+        let rand = Math.floor(Math.random() * i);
+        let randCard = cloneCardsArr.splice(rand, 1);
+        newCardsArr.push(randCard[0]);
+    }
+}
+const rewrite = (dir) => {
+  newCardsArr = [];
+  mix();
+  for(let i = 0; i < PETS.length; i++) {
+    PETS[i].querySelector('.pets__img').src = newCardsArr[i].imgCardPets;
+    PETS[i].querySelector('.pets__title').innerHTML = newCardsArr[i].name;
+    PETS[i].querySelector('.pets__subtitle').innerHTML = newCardsArr[i].textCard;
+    PETS[i].querySelector('.pets__icon-img').src = newCardsArr[i].iconeFood;
+
+    if (dir === 'left') {
+      PETS[i].classList.remove('scroll-right');
+      PETS[i].classList.add('scroll-left');
+      BUTTLEFT.style.pointerEvents = 'none';
+      BUTTRIGHT.style.pointerEvents = 'none';
+      BUTTLEFT.classList.add('btn-disabled');
+      BUTTRIGHT.classList.add('btn-disabled');
+      setTimeout(() => {
+        BUTTLEFT.style.pointerEvents = '';
+        BUTTRIGHT.style.pointerEvents = '';
+        BUTTLEFT.classList.remove('btn-disabled');
+        BUTTRIGHT.classList.remove('btn-disabled');
+        PETS[i].classList.remove('scroll-left');
+      }, 201)
+    }
+    else if (dir === 'right') {
+      PETS[i].classList.remove('scroll-left');
+      PETS[i].classList.add('scroll-right');
+      BUTTLEFT.style.pointerEvents = 'none';
+      BUTTRIGHT.style.pointerEvents = 'none';
+      BUTTLEFT.classList.add('btn-disabled');
+      BUTTRIGHT.classList.add('btn-disabled');
+      setTimeout(() => {
+        BUTTLEFT.style.pointerEvents = '';
+        BUTTRIGHT.style.pointerEvents = '';
+        PETS[i].classList.remove('scroll-right');
+        BUTTLEFT.classList.remove('btn-disabled');
+        BUTTRIGHT.classList.remove('btn-disabled');
+      }, 201)
+    }
+    
+  }
+}
+const BUTTLEFT = document.querySelector('.pets__arrow-img-two');
+const BUTTRIGHT = document.querySelector('.pets__arrow-img-one');
+BUTTLEFT.addEventListener('click', () => {
+  rewrite('left');
+})
+BUTTRIGHT.addEventListener('click', () => {
+  rewrite('right');
+})
