@@ -1069,6 +1069,16 @@ main {
 .active__bet {
   color: #FE9013;
 }
+/* JS Animations */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.2s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 .scroll-right {
   /* transform: translate(-140%);
   transition: all 0.1s; */
@@ -1192,6 +1202,9 @@ main {
       width: 100%;
       padding-bottom: 37px;
   }
+  .testimonials__content {
+    justify-content: center;
+}
   /* .testimonials__line {
     width: 390px;
     margin-bottom: 50px;

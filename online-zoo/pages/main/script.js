@@ -63,7 +63,7 @@ DARK.addEventListener('click', () => {
   closePopup();
 })
 
-// заполнение попапа
+// popup fill
 
 const cardsTest = document.querySelector('.testimonials__content');
 let nameCardPopap = document.querySelector('.popup__username'),
@@ -189,3 +189,110 @@ BUTTLEFT.addEventListener('click', () => {
 BUTTRIGHT.addEventListener('click', () => {
   rewrite('right');
 })
+
+// ------------------- testimonials carousel -----------------------------
+
+const testmonialGuys = [
+  user1 = {
+      name: "Michael John",
+      photo: "../../assets/icons/user_icon.svg",
+      local: "Local Austria",
+      date: "Today",
+      text: "Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.",
+  },
+  user2 = {
+    name: "Oskar Samborsky",
+    photo: "../../assets/images/user1.jpg",
+    local: "Local Austria",
+    date: "Today",
+    text: "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
+  },
+  user3 = {
+    name: "Fredericka Michelin",
+    photo: "../../assets/images/user2.jpg",
+    local: "Local Austria",
+    date: "Yesterday",
+    text: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met.",
+  },
+  user4 = {
+    name: "Mila Riksha",
+    photo: "../../assets/images/user3.jpg",
+    local: "Local Austria",
+    date: "Yesterday",
+    text: "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
+  },
+  user5 = {
+    name: "Michael John",
+    photo: "../../assets/icons/user_icon.svg",
+    local: "Local Austria",
+    date: "Tomorrow",
+    text: "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
+},
+  user6 = {
+    name: "Fredericka Michelin",
+    photo: "../../assets/images/user2.jpg",
+    local: "London",
+    date: "Tomorrow",
+    text: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met.",
+  },
+  user7 = {
+    name: "Mila Riksha",
+    photo: "../../assets/images/user3.jpg",
+    local: "New York",
+    date: "Today",
+    text: "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
+  },
+  user8 = {
+    name: "Oskar Samborsky",
+    photo: "../../assets/images/user1.jpg",
+    local: "Local Austria",
+    date: "Today",
+    text: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met.",
+  },
+  user9 = {
+    name: "Mila Riksha",
+    photo: "../../assets/images/user3.jpg",
+    local: "Moskow",
+    date: "Yesterday",
+    text: "Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.",
+  },
+  user10 = {
+    name: "Michael John",
+    photo: "../../assets/icons/user_icon.svg",
+    local: "Local Austria",
+    date: "Tomorrow",
+    text: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met.",
+},
+  user11 = {
+    name: "Fredericka Michelin",
+    photo: "../../assets/images/user2.jpg",
+    local: "Pogreb",
+    date: "Yesterday",
+    text: "Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.",
+  }
+];
+
+const TESTIM = document.querySelector('.testimonials__content');
+const TESITEMS = document.querySelectorAll('.testimonials__item');
+
+const write = (shift) => {
+  for (let i = 0; i < TESITEMS.length; i++) {
+    TESITEMS[i].querySelector('.testimonials__user-img').src = testmonialGuys[+shift + i].photo;
+    TESITEMS[i].querySelector('.testimonials__user-name').innerHTML = testmonialGuys[+shift + i].name;
+    TESITEMS[i].querySelector('.testimonials__user-local').innerHTML = testmonialGuys[+shift + i].local;
+    TESITEMS[i].querySelector('.testimonials__user-date').innerHTML = testmonialGuys[+shift + i].date;
+    let texts = TESITEMS[i].querySelectorAll('.testimonials__content-text');
+    texts[0].innerHTML = testmonialGuys[+shift + i].text;
+    texts[1].innerHTML = testmonialGuys[+shift + i].text;
+    TESTIM.classList.add('fade');
+    setTimeout(() => {
+      TESTIM.classList.remove('fade');
+    }, 201)
+  }
+}
+let range = document.querySelector("input[type='range']");
+range.addEventListener('input', () => {
+  write(range.value);
+});
+
+alert('Дико извиняюсь за задержку и спасибо что подождали. \n Известные ошибки: карусель pets с разрешением 1000px иногда начинает сходить с ума и слегка менять позиционку кнопок. Лечится парой перезагрузок страницы, от чего это зависит не представляю. \n Если есть какие-то ошибки пишите, пожалуйста, в ревью или в дискорд Sylphur(Pururu)#3428');
