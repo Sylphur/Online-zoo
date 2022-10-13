@@ -54,15 +54,22 @@ inputDonate.addEventListener('input', () => {
     for (let k = 0; k < bets.length; k++) {
         if (bets[k].innerHTML.slice(1) == inputDonate.value) {
             bets[k].classList.add('active__bet');
-            for (let j = 0; j < inputRadio.length; j++) {
-              if (k === j) inputRadio[j].checked = true;
-              else inputRadio[j].checked = false;
-            }
+            inputRadio[k].checked = false;
         } else {
             bets[k].classList.remove('active__bet');
-            for (let j = 0; j < inputRadio.length; j++) {
-              inputRadio[j].checked = false;
-            }
         }
     }
+    for (let k = 0; k < bets.length; k++) {
+      if (bets[k].innerHTML.slice(1) == inputDonate.value) {
+          inputRadio[k].checked = false;
+          for (let j = 0; j < inputRadio.length; j++) {
+            if (k === j) inputRadio[j].checked = true;
+          }
+      break;
+      } else {
+          for (let j = 0; j < inputRadio.length; j++) {
+            inputRadio[j].checked = false;
+          }
+      }
+  }
 })
